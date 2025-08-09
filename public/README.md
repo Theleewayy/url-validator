@@ -121,41 +121,30 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
+<img width="960" height="504" alt="url-1" src="https://github.com/user-attachments/assets/9e0742d3-7622-46fb-a157-21f50548b4fa" />
+<img width="960" height="504" alt="url-3" src="https://github.com/user-attachments/assets/a9d14654-bf43-4b17-9a82-4df99be8151f" />
+<img width="960" height="504" alt="url-2" src="https://github.com/user-attachments/assets/0b253053-abdd-4a74-804f-c480d8e05cf1" />
 
 
 # Diagrams
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 # Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
 
-![Build](Add photos of build process here)
-*Explain the build steps*
+<img width="960" height="504" alt="build 1" src="https://github.com/user-attachments/assets/f2da0b80-6321-4a4f-925b-a66624d160d8" />
 
-![Final](Add photo of final product here)
-*Explain the final build*
+
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://drive.google.com/file/d/1a__vmINubcw-fduR1IhgBkE-A4nIPYHE/view?usp=drivesdk
 
 # Additional Demos
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Leena: Front end
+- Jithu: Back end
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
