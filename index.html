@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A useless URL validator that always rejects URLs regardless of validity - perfect for testing error handling">
+    <meta name="keywords" content="url validator, useless, demo, error handling, testing">
+    <meta name="author" content="Useless Developer">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Useless URL Validator - Always Rejects URLs</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Preload critical resources for performance -->
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+</head>
+<body>
+    <!-- Skip to main content link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="container">
+        <!-- Header Section with proper semantic markup -->
+        <header class="header" role="banner">
+            <div class="logo">
+                <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                <h1>Useless URL Validator</h1>
+            </div>
+            <p class="subtitle">Because every URL deserves to be rejected</p>
+        </header>
+
+        <!-- Main Content Section -->
+        <main class="main-content" id="main-content" role="main">
+            <!-- URL Validator Card with proper labeling -->
+            <section class="validator-card" aria-labelledby="validator-title">
+                <div class="card-header">
+                    <h2 id="validator-title">Validate Your URL</h2>
+                    <p>Enter any URL below and watch it get rejected</p>
+                </div>
+
+                <!-- URL Form with comprehensive accessibility -->
+                <form id="urlForm" class="url-form" novalidate role="form" aria-labelledby="validator-title">
+                    <div class="input-group">
+                        <label for="urlInput" id="urlLabel">
+                            <i class="fas fa-globe" aria-hidden="true"></i>
+                            Website URL
+                        </label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-link input-icon" aria-hidden="true"></i>
+                            <input 
+                                type="url" 
+                                id="urlInput" 
+                                name="url" 
+                                placeholder="https://example.com"
+                                required
+                                autocomplete="off"
+                                aria-describedby="urlHelp urlError"
+                                aria-labelledby="urlLabel"
+                                aria-invalid="false"
+                                maxlength="2048"
+                                pattern="https?://.+"
+                                title="Please enter a valid URL starting with http:// or https://"
+                                spellcheck="false"
+                            >
+                            <div class="input-focus-border" aria-hidden="true"></div>
+                        </div>
+                        <small id="urlHelp" class="help-text">
+                            Enter any URL to validate its format and accessibility
+                        </small>
+                        <!-- Error hint for screen readers -->
+                        <div id="urlError" class="error-hint" role="alert" aria-live="polite" hidden></div>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="submit-btn" aria-describedby="submitHelp">
+                        <i class="fas fa-check" aria-hidden="true"></i>
+                        <span class="btn-text">Validate URL</span>
+                    </button>
+                    <small id="submitHelp" class="help-text">
+                        Click to submit your URL for validation (will always fail)
+                    </small>
+                </form>
+
+                <!-- Loading State with proper ARIA attributes -->
+                <div id="loading" class="loading hidden" role="status" aria-live="polite">
+                    <div class="spinner" aria-hidden="true"></div>
+                    <p>Validating your URL...</p>
+                </div>
+
+                <!-- Result Display with assertive live region -->
+                <div id="result" class="result hidden" role="alert" aria-live="assertive">
+                    <div class="error-message">
+                        <div class="error-icon">
+                            <i class="fas fa-times-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="error-content">
+                            <h3>Invalid URL</h3>
+                            <p id="errorText">Please try again</p>
+                            <div class="error-details">
+                                <span class="error-code">Error Code: URL_VALIDATION_FAILED</span>
+                                <span class="error-time" id="errorTime"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Info Section with proper heading structure -->
+            <section class="info-section" aria-labelledby="info-title">
+                <h2 id="info-title" class="visually-hidden">Information about this validator</h2>
+                <div class="info-card">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                    <h3>How It Works</h3>
+                    <p>This validator will reject any URL you enter, regardless of its validity. It's designed to be completely useless!</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                    <h3>Always Fails</h3>
+                    <p>Whether you enter a perfectly valid URL like https://www.google.com or complete gibberish, it will always show an error.</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-laugh" aria-hidden="true"></i>
+                    <h3>For Fun</h3>
+                    <p>This is a demonstration of how to create a web application that always returns errors. Perfect for testing error handling!</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer with proper semantic markup -->
+        <footer class="footer" role="contentinfo">
+            <p>&copy; 2024 Useless URL Validator. Made with ❤️ and a sense of humor.</p>
+        </footer>
+    </div>
+
+    <!-- Scripts loaded at end for performance -->
+    <script src="script.js"></script>
+</body>
+</html>
